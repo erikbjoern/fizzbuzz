@@ -1,12 +1,19 @@
 def fizzbuzz(number)
-    if number %15 == 0
+    if number.is_a? String
+        "please enter a number"
+    elsif number < 0
+        "please enter a positive number"
+    elsif remainder_zero(number, 15) == 0
         "fizzbuzz"
-    elsif number %3 == 0
+    elsif remainder_zero(number, 3) == 0
         "fizz"
-    elsif number %5 == 0
+    elsif remainder_zero(number, 5) == 0
         "buzz"
     else
         number
     end
+end
 
+def remainder_zero(number, divider)
+    number%divider
 end

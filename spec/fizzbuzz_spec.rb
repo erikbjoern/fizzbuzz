@@ -18,4 +18,11 @@ describe "fizzbuzz" do
         expect(fizzbuzz(15)).to eq "fizzbuzz"
     end
 
+    it 'returns "please enter a positive number" if number < 0' do
+        expect(fizzbuzz(-1)).to eq "please enter a positive number"
+    end
+
+    it 'returns "please enter a number" if input is letters' do
+        expect(fizzbuzz("a")).to eq "please enter a number"
+    end
 end
