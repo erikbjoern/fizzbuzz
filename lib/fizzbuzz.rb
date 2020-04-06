@@ -17,3 +17,10 @@ end
 def remainder_zero(number, divider)
     number%divider
 end
+
+n=0
+
+100.times do
+    n+=1
+    puts fizzbuzz(n)
+end
